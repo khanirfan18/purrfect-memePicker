@@ -23,6 +23,7 @@ function highlightCheckedOption(e){
 
 function closeModal(){
     memeModal.style.display = 'none'
+    memeModal.parentElement.classList = 'none'
 }
 
 function renderCat(){
@@ -100,6 +101,8 @@ function renderEmotionsRadios(cats){
 
 renderEmotionsRadios(catsData)
 
-
-
+const toggleDark = document.getElementById('dark-toggle')
+toggleDark.addEventListener('click',function(){
+    document.body.classList.toggle('dark-mode')
+}) 
 
